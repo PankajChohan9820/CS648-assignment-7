@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0px;
+}
+
+.text-center {
+  text-align: left;
+}
+
+/* Buttons */
+.column {
+  float: left;
+  width: 50%;
+}
+
+.root-container {
+  margin: 0 0;
+}
+
+.onSubmit_form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.onSubmit_form .form-element-container {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 10px;
+}
+
+.onSubmit_form label {
+  margin-bottom: 10px;
+}
+
+.onSubmit_form input,
+.onSubmit_form select {
+  width: 200px;
+  padding: 5px;
+}
+
+/* .table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0 20px;
+} */
+
+table.bordered-table th, td {
+  border: 1px solid rgb(49, 92, 128);
+  padding: 20px;
+}
+
+table.bordered-table {
+  border-collapse: collapse;
+}
+
+
+.submit-button {
+  margin-top: 10px;
+}
+
+/* Media queries for mid-size devices or smaller */
+@media (max-width: 768px) {
+  .onSubmit_form {
+    flex-flow: column;
+  }
+}
+
+
+table.bordered-table th, td {
+  border: 1px solid rgb(49, 92, 128);
+  padding: 4px;
+}
+

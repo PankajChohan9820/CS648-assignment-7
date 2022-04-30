@@ -1,0 +1,43 @@
+enum Category {
+  Shirts
+  Jeans
+  Jackets
+  Sweaters
+  Accessories
+}
+
+type Product {
+    product_id: Int
+    product_name: String
+    product_category: Category!
+    product_price: Float!
+    product_image: String!
+}
+
+input ProductInputs {
+    product_name: String
+    product_category: Category
+    product_price: Float!
+    product_image: String
+}
+
+
+input ProductUpdateInputs {
+  product_name: String
+  product_category: Category
+  product_price: Float
+  product_image: String
+}
+
+
+type Query {
+  productList: [Product!]!
+  product(product_id: Int!): Product!
+  productCount: Int!
+}
+
+type Mutation {
+  addProduct(product: ProductInputs!): Product!
+  deleteProduct(product_id: Int!): Boolean!
+  updateProduct(product_id: Int!, changes: ProductUpdateInputs!): Product!
+}
