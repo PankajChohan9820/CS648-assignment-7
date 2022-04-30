@@ -23,7 +23,7 @@ export default class ProductList extends React.Component {
               productCount
           }`;
 
-    const data = await graphQLFetch(query);
+    const data = await fetchGraphQl(query);
     if (data) {
       this.setState({ productCount: data.productCount });
     }
